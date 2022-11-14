@@ -7,17 +7,27 @@
         <meta name="description" content="Quest the world">
         <meta name="keywords" content="Education">
         <style>
-        body {
-          background-image: url('https://live.staticflickr.com/65535/52439693830_f2d39c312b_6k_d.jpg');
-          height: 800px; /* You must set a specified height */
-          background-position: center; /* Center the image */
-          background-repeat: no-repeat; /* Do not repeat the image */
-          background-size: cover; /* Resize the background image to cover the entire container */
-        }
-          blockquote {
-             border-left: 5px solid #0F52BA80;
-             border-right:5px solid #0F52BA80;
-             /*block-size: 75%;*/
+            @keyframes flying{
+                0%, 100%{transform:translate(0px, -50px) rotate(-18deg);
+                    }
+                50%{transform:translate(0px, 50px) rotate(-8deg);
+                }
+            }
+            body {
+              background-image: url('https://live.staticflickr.com/65535/52439693830_f2d39c312b_6k_d.jpg');
+              height: 800px; /* You must set a specified height */
+              background-position: center; /* Center the image */
+              background-repeat: no-repeat; /* Do not repeat the image */
+              background-size: cover; /* Resize the background image to cover the entire container */
+            }
+            blockquote {
+                 border-left: 5px solid #0F52BA80;
+                 border-right:5px solid #0F52BA80;
+                 /*block-size: 75%;*/
+                }
+            .fly{
+                animation: flying 5s infinite;
+                background-color:#1F51FF80;
             }
         </style>
     </head>
@@ -27,6 +37,7 @@
         <span> 
             <div style="background-color: ##87CEEB80;display: flex; justify-content: space-between;" > 
                 <a rel="next" href="jellyfish.html" style="color: white;">let go to jellyfish field</a> 
+                <div class="fly"> Watched zathura with my roommate last night</div>
                 <iframe style="border-radius:5px;float:right;"src="https://open.spotify.com/embed/track/35oinFnDmytYGErVrricXk?utm_source=generator" 
                                     width="80%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
                 </iframe>
