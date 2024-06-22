@@ -1,1 +1,137 @@
-hi
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+<meta name="report" content="width=device-width, initial-scale=1">
+.zoom {
+  /* padding: 40px;
+  text-align: center;
+  width: 80%;
+  
+  position: relative;
+  */
+  
+  
+  transition: transform .5s;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2);  
+}
+
+.card
+{
+  background-color: transparent;
+  float:left;
+  width: 48%;
+  height: 400px;
+  perspective: 800px;
+}
+
+.card:focus {
+    outline: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-backface-visibility: visible;
+  -webkit-backface-visibility: hidden;
+  /*
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  */
+  
+  
+  backface-visibility: hidden;
+}
+
+.card:hover .flip-card-inner,
+.card:focus .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  z-index: 2;
+  display: grid;
+  /*
+  justify-content: normal;
+  align-items: center;
+  */
+  transform-style: preserve-3d;
+  backface-visibility: hidden; 
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  display: grid;
+   /*
+  justify-content: center;
+  align-items: center;
+   */
+}
+
+.card-front, 
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+
+</style>
+
+</head> 
+<body>
+<h1> Yulong </h1> 
+<h2> Research Interests </h2>
+
+<div style =" width: 100%; height: 400px; float: none;" >
+  <div align="center" class="card">
+    <!--a div class="flip-card-inner" -->   <!--align-items: center;justify-content: center; position: relative;-->
+    <div style ="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); height: 100%; display: grid; justify-items: center;"> 
+      <h3> Machine Learning </h3> 
+      <div style ="width: 80%;"  class="zoom">
+      <ul>
+      <li> <span style ="font-size: 20px;font-weight: bold;" >Interested in anatomy detection in the human lower face images </span><br />
+      Topic: landmarks/corners/edges localization using attention models or spatial-perserved models and heatmap latent representation </li>  
+      <li> <span style ="font-size: 20px;font-weight: bold;" >Interested in image inpainting, restoration and restyle </span><br />
+      Topic: using <a href="https://dl.acm.org/doi/pdf/10.1145/3422622">GANs</a>/<a href="https://arxiv.org/pdf/1312.6114.pdf">VAEs</a>/the generative models like <a href="https://openaccess.thecvf.com/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">NeuralStyleTransfer</a> to repair or transform images</li>
+      </ul>
+      </div>
+    </div>
+    <!--a/div-->
+  </div>
+  
+
+  <div align="center" class="card">
+    <!--div class="flip-card-inner"  justify-content: space-evenly; align-content: space-evenly; align-items: center; style =" align-items: start;"-->
+
+    <div style ="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); height: 100%;  display: grid;justify-items: center;">
+       <h3 > Virtual Reality </h3>      
+      <div style ="width: 80%;" class="zoom" >
+      <ul>
+      <li > <span style ="font-size: 20px;font-weight: bold;" >Interested in empowering multisensory immersive experience for users in VR social scene. </span><br />
+      Topics:  Users Facial streaming or inferred animation by Machine Learning on avatars in VR to give visual cues to resonate with acoustic and other sensory stimuli.
+      <li > <span style ="font-size: 20px;font-weight: bold;" > Interested in reconstructing 3D objects for virtual reality content creation. </span><br />
+      Topics: reconstruction or fusion a point cloud with RGB-Depth sensors data. 
+      </ul>
+      </div>
+    </div>
+    <!--/div -->
+  </div>
+
+</div
+
+  
+</body>
+</html>
